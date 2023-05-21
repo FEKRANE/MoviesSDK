@@ -20,6 +20,7 @@
 		20C371A22A1A9F050071B6BE /* UpcomingReleasesRQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C371A12A1A9F050071B6BE /* UpcomingReleasesRQ.swift */; };
 		20C371A42A1AA3180071B6BE /* UpcomingReleasesRS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C371A32A1AA3180071B6BE /* UpcomingReleasesRS.swift */; };
 		20C371A62A1AB3BD0071B6BE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C371A52A1AB3BD0071B6BE /* Constants.swift */; };
+		20C371A92A1AB6CE0071B6BE /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C371A82A1AB6CE0071B6BE /* Interactor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		20C371A12A1A9F050071B6BE /* UpcomingReleasesRQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingReleasesRQ.swift; sourceTree = "<group>"; };
 		20C371A32A1AA3180071B6BE /* UpcomingReleasesRS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingReleasesRS.swift; sourceTree = "<group>"; };
 		20C371A52A1AB3BD0071B6BE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		20C371A82A1AB6CE0071B6BE /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		2016A6CB2A1A4D3800547D20 /* MoviesSDK */ = {
 			isa = PBXGroup;
 			children = (
+				20C371A72A1AB6AC0071B6BE /* Interactor */,
 				2016A6E92A1A5F9400547D20 /* Common */,
 				2016A6E32A1A5E4A00547D20 /* Networking */,
 				2016A6CC2A1A4D3800547D20 /* MoviesSDK.h */,
@@ -150,6 +153,14 @@
 				20C371A32A1AA3180071B6BE /* UpcomingReleasesRS.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		20C371A72A1AB6AC0071B6BE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				20C371A82A1AB6CE0071B6BE /* Interactor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +274,7 @@
 			files = (
 				2016A6E62A1A5E8200547D20 /* URLSessionProtocol.swift in Sources */,
 				2016A6CE2A1A4D3800547D20 /* MoviesSDK.docc in Sources */,
+				20C371A92A1AB6CE0071B6BE /* Interactor.swift in Sources */,
 				20C3719A2A1A87920071B6BE /* NetworkManager.swift in Sources */,
 				2016A6EB2A1A5FA100547D20 /* Enums.swift in Sources */,
 				20C371A22A1A9F050071B6BE /* UpcomingReleasesRQ.swift in Sources */,
