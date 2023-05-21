@@ -20,7 +20,7 @@ protocol InteractorProtocol {
 }
 
 
-struct SDKInteractor: InteractorProtocol {
+struct MoviesSDKInteractor: InteractorProtocol {
     fileprivate var networkProvider: SDKNetworkProvider
     
     init(networkProvider: SDKNetworkProvider = NetworkManager.sharedInstance) {
