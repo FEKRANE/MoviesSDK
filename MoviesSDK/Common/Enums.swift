@@ -23,6 +23,11 @@ enum ManagerErrors: Error {
     case invalidStatusCode(Int)
 }
 
+enum MediaType: String {
+    case movie
+    case tvSeries
+}
+
 /**
     StandardSDKError is an enumeration of possible errors that can be thrown when using the SDK.
 

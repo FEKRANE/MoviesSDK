@@ -17,6 +17,8 @@
 		20C3719A2A1A87920071B6BE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C371992A1A87920071B6BE /* NetworkManager.swift */; };
 		20C3719D2A1A8B960071B6BE /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C3719C2A1A8B960071B6BE /* Dictionary.swift */; };
 		20C3719F2A1A8BA30071B6BE /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C3719E2A1A8BA30071B6BE /* Codable.swift */; };
+		20C371A22A1A9F050071B6BE /* UpcomingReleasesRQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C371A12A1A9F050071B6BE /* UpcomingReleasesRQ.swift */; };
+		20C371A42A1AA3180071B6BE /* UpcomingReleasesRS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C371A32A1AA3180071B6BE /* UpcomingReleasesRS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,8 @@
 		20C371992A1A87920071B6BE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		20C3719C2A1A8B960071B6BE /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		20C3719E2A1A8BA30071B6BE /* Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codable.swift; sourceTree = "<group>"; };
+		20C371A12A1A9F050071B6BE /* UpcomingReleasesRQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingReleasesRQ.swift; sourceTree = "<group>"; };
+		20C371A32A1AA3180071B6BE /* UpcomingReleasesRS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingReleasesRS.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 		2016A6E32A1A5E4A00547D20 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				20C371A02A1A9C160071B6BE /* Models */,
 				2016A6E42A1A5E6500547D20 /* Protocols */,
 				20C371992A1A87920071B6BE /* NetworkManager.swift */,
 			);
@@ -133,6 +138,15 @@
 				20C3719E2A1A8BA30071B6BE /* Codable.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		20C371A02A1A9C160071B6BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				20C371A12A1A9F050071B6BE /* UpcomingReleasesRQ.swift */,
+				20C371A32A1AA3180071B6BE /* UpcomingReleasesRS.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,8 +262,10 @@
 				2016A6CE2A1A4D3800547D20 /* MoviesSDK.docc in Sources */,
 				20C3719A2A1A87920071B6BE /* NetworkManager.swift in Sources */,
 				2016A6EB2A1A5FA100547D20 /* Enums.swift in Sources */,
+				20C371A22A1A9F050071B6BE /* UpcomingReleasesRQ.swift in Sources */,
 				20C3719F2A1A8BA30071B6BE /* Codable.swift in Sources */,
 				2016A6E82A1A5F4F00547D20 /* NetworkProvider.swift in Sources */,
+				20C371A42A1AA3180071B6BE /* UpcomingReleasesRS.swift in Sources */,
 				20C3719D2A1A8B960071B6BE /* Dictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
