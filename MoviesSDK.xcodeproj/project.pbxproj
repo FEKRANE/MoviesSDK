@@ -11,6 +11,12 @@
 		2016A6D42A1A4D3900547D20 /* MoviesSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2016A6C92A1A4D3800547D20 /* MoviesSDK.framework */; };
 		2016A6D92A1A4D3900547D20 /* MoviesSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2016A6D82A1A4D3900547D20 /* MoviesSDKTests.swift */; };
 		2016A6DA2A1A4D3900547D20 /* MoviesSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 2016A6CC2A1A4D3800547D20 /* MoviesSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2016A6E62A1A5E8200547D20 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2016A6E52A1A5E8200547D20 /* URLSessionProtocol.swift */; };
+		2016A6E82A1A5F4F00547D20 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2016A6E72A1A5F4F00547D20 /* NetworkProvider.swift */; };
+		2016A6EB2A1A5FA100547D20 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2016A6EA2A1A5FA100547D20 /* Enums.swift */; };
+		20C3719A2A1A87920071B6BE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C371992A1A87920071B6BE /* NetworkManager.swift */; };
+		20C3719D2A1A8B960071B6BE /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C3719C2A1A8B960071B6BE /* Dictionary.swift */; };
+		20C3719F2A1A8BA30071B6BE /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C3719E2A1A8BA30071B6BE /* Codable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +35,12 @@
 		2016A6CD2A1A4D3800547D20 /* MoviesSDK.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = MoviesSDK.docc; sourceTree = "<group>"; };
 		2016A6D32A1A4D3900547D20 /* MoviesSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2016A6D82A1A4D3900547D20 /* MoviesSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesSDKTests.swift; sourceTree = "<group>"; };
+		2016A6E52A1A5E8200547D20 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		2016A6E72A1A5F4F00547D20 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		2016A6EA2A1A5FA100547D20 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		20C371992A1A87920071B6BE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		20C3719C2A1A8B960071B6BE /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		20C3719E2A1A8BA30071B6BE /* Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +83,8 @@
 		2016A6CB2A1A4D3800547D20 /* MoviesSDK */ = {
 			isa = PBXGroup;
 			children = (
+				2016A6E92A1A5F9400547D20 /* Common */,
+				2016A6E32A1A5E4A00547D20 /* Networking */,
 				2016A6CC2A1A4D3800547D20 /* MoviesSDK.h */,
 				2016A6CD2A1A4D3800547D20 /* MoviesSDK.docc */,
 			);
@@ -83,6 +97,42 @@
 				2016A6D82A1A4D3900547D20 /* MoviesSDKTests.swift */,
 			);
 			path = MoviesSDKTests;
+			sourceTree = "<group>";
+		};
+		2016A6E32A1A5E4A00547D20 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2016A6E42A1A5E6500547D20 /* Protocols */,
+				20C371992A1A87920071B6BE /* NetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		2016A6E42A1A5E6500547D20 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2016A6E52A1A5E8200547D20 /* URLSessionProtocol.swift */,
+				2016A6E72A1A5F4F00547D20 /* NetworkProvider.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2016A6E92A1A5F9400547D20 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				20C3719B2A1A8B730071B6BE /* Extensions */,
+				2016A6EA2A1A5FA100547D20 /* Enums.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		20C3719B2A1A8B730071B6BE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				20C3719C2A1A8B960071B6BE /* Dictionary.swift */,
+				20C3719E2A1A8BA30071B6BE /* Codable.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,7 +244,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2016A6E62A1A5E8200547D20 /* URLSessionProtocol.swift in Sources */,
 				2016A6CE2A1A4D3800547D20 /* MoviesSDK.docc in Sources */,
+				20C3719A2A1A87920071B6BE /* NetworkManager.swift in Sources */,
+				2016A6EB2A1A5FA100547D20 /* Enums.swift in Sources */,
+				20C3719F2A1A8BA30071B6BE /* Codable.swift in Sources */,
+				2016A6E82A1A5F4F00547D20 /* NetworkProvider.swift in Sources */,
+				20C3719D2A1A8B960071B6BE /* Dictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +405,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,6 +433,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,6 +452,7 @@
 		2016A6E12A1A4D3900547D20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -409,6 +468,7 @@
 		2016A6E22A1A4D3900547D20 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
