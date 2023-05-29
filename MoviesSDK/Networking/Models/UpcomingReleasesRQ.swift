@@ -9,11 +9,11 @@ import Foundation
 
 struct UpcomingReleasesRQ: Encodable {
     let titleType: String?
-    let limit: Int
     let page: String
-    
+    let limit: Int
+
     private enum CodingKeys: String, CodingKey {
-        case titleType, limit, page
+        case titleType, page, limit
     }
     
     func encode(to encoder: Encoder) throws {

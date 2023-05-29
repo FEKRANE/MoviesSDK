@@ -21,9 +21,9 @@ struct UpcomingReleasesRS: Decodable {
 }
 
 struct Movie: Decodable {
-    let title: MovieTitle
+    let title: MovieTitle?
     let image: MovieImage?
-    let releaseDate: ReleaseDate
+    let releaseDate: ReleaseDate?
     
     enum CodingKeys: String, CodingKey {
         case title = "titleText"
@@ -33,13 +33,13 @@ struct Movie: Decodable {
 }
 
 struct MovieImage: Decodable {
-    let width: Int
-    let height: Int
-    let url: String
+    let width: Int?
+    let height: Int?
+    let url: String?
 }
 
 struct MovieTitle: Decodable {
-    let name: String
+    let name: String?
     
     enum CodingKeys: String, CodingKey {
         case name = "text"
@@ -47,7 +47,18 @@ struct MovieTitle: Decodable {
 }
 
 struct ReleaseDate: Decodable {
-    let day: Int
-    let month: Int
-    let year: Int
+    let day: Int?
+    let month: Int?
+    let year: Int?
+}
+
+extension ReleaseDate {
+    var date: Date? {
+        let calendar = Calendar.current
+        var dateComponents = DateComponents()
+        dateComponents.year = year
+        dateComponents.month = month
+        dateComponents.day = day
+        return calendar.date(from: dateComponents)
+    }
 }

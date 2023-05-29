@@ -34,15 +34,15 @@ class NetworkManager {
     }
     
     
-    func request<T: Encodable,U: Decodable>(fromURL urlString: String,
+    func request<T: Decodable>(fromURL urlString: String,
                                             httpMethod: HttpMethod,
                                             queryParams: [String: String]?,
-                                            bodyRequest: T?,
+                                            bodyRequest: Encodable?,
                                             headers: HTTPHeaders,
                                             encoding: ParameterEncoding = .JSONEncoding,
-                                            completion: @escaping (Result<U, Error>) -> Void) -> URLSessionTaskProtocol {
+                                            completion: @escaping (Result<T, Error>) -> Void) -> URLSessionTaskProtocol {
         
-        let completionOnQueue: (Result<U, Error>) -> Void = { result in
+        let completionOnQueue: (Result<T, Error>) -> Void = { result in
             guard let responseQueue = self.responseQueue else {
                 completion(result)
                 return
@@ -77,7 +77,7 @@ class NetworkManager {
             
             guard let data = data else { return }
             do {
-                let decodedResponse = try JSONDecoder().decode(U.self, from: data)
+                let decodedResponse = try JSONDecoder().decode(T.self, from: data)
                 completionOnQueue(.success(decodedResponse))
             } catch {
                 completionOnQueue(.failure(error))
@@ -89,7 +89,7 @@ class NetworkManager {
 }
 
 extension NetworkManager: SDKNetworkProvider {
-    func buildTask<T, U>(fromURL urlString: String, httpMethod: HttpMethod, queryParams: [String : String]?, bodyRequest: T?, headers: HTTPHeaders, encoding: ParameterEncoding, completion: @escaping (Result<U, Error>) -> Void) -> URLSessionTaskProtocol where T : Encodable, U : Decodable {
+    func buildTask<T>(fromURL urlString: String, httpMethod: HttpMethod, queryParams: [String : String]?, bodyRequest: Encodable?, headers: HTTPHeaders, encoding: ParameterEncoding, completion: @escaping (Result<T, Error>) -> Void) -> URLSessionTaskProtocol where T : Decodable {
         self.request(fromURL: urlString, httpMethod: httpMethod, queryParams: queryParams, bodyRequest: bodyRequest, headers: headers, encoding: encoding, completion: completion)
     }
 }

@@ -36,6 +36,7 @@ enum MediaType: String {
     - Case unexpected: An unexpected error occurred with the provided error code.
 */
 public enum MoviesSDKError: Error {
+    case noSetup
     case serverCommunication
     case missingData
     case unexpected(code: Int)
@@ -44,6 +45,8 @@ public enum MoviesSDKError: Error {
 extension MoviesSDKError{
     public var description: String {
         switch self{
+        case .noSetup:
+            return "You must initialize SDK with the app id."
         case .serverCommunication:
             return "There was an error communicating with the server."
         case .missingData:

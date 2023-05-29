@@ -10,31 +10,32 @@ import Foundation
 typealias CompletionHandler<T: Decodable> = (Result<T, Error>) -> Void
 
 protocol InteractorProtocol {
-    func executeRequest<T: Encodable,U: Decodable>(fromURL urlString: String,
+    func executeRequest<T: Decodable>(fromURL urlString: String,
                                                  httpMethod: HttpMethod,
                                                  queryParams: [String: String]?,
-                                                 bodyRequest: T?,
+                                                 bodyRequest: Encodable?,
                                                  headers: HTTPHeaders,
                                                  encoding: ParameterEncoding,
-                                                 completion: @escaping (Result<U, Error>) -> Void)
+                                                 completion: @escaping (Result<T, Error>) -> Void)
 }
 
 
 struct MoviesSDKInteractor: InteractorProtocol {
+    
     fileprivate var networkProvider: SDKNetworkProvider
     
     init(networkProvider: SDKNetworkProvider = NetworkManager.sharedInstance) {
         self.networkProvider = networkProvider
     }
     
-    func executeRequest<T: Encodable, U: Decodable>(
+    func executeRequest<T: Decodable>(
         fromURL url: String,
         httpMethod: HttpMethod,
         queryParams: [String: String]? = nil,
-        bodyRequest: T? = nil,
+        bodyRequest: Encodable? = nil,
         headers: HTTPHeaders,
         encoding: ParameterEncoding,
-        completion: @escaping CompletionHandler<U>
+        completion: @escaping CompletionHandler<T>
     ) {
         let task = self.networkProvider.buildTask(fromURL: url, httpMethod: httpMethod, queryParams: queryParams, bodyRequest: bodyRequest, headers: headers, encoding: encoding, completion: completion)
         task.resume()

@@ -11,11 +11,11 @@ typealias HTTPHeaders = [String: String]
 
 protocol SDKNetworkProvider {
     
-    func buildTask<T: Encodable,U: Decodable>(fromURL urlString: String,
+    func buildTask<T: Decodable>(fromURL urlString: String,
                                             httpMethod: HttpMethod,
                                             queryParams: [String: String]?,
-                                            bodyRequest: T?,
+                                            bodyRequest: Encodable?,
                                             headers: HTTPHeaders,
                                             encoding: ParameterEncoding,
-                                            completion: @escaping (Result<U, Error>) -> Void) -> URLSessionTaskProtocol
+                                            completion: @escaping (Result<T, Error>) -> Void) -> URLSessionTaskProtocol
 }

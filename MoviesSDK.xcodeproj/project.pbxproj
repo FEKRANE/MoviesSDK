@@ -25,6 +25,7 @@
 		20C371AE2A1AB8080071B6BE /* MoviesSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C371AD2A1AB8080071B6BE /* MoviesSDK.swift */; };
 		20C371B12A1B6E310071B6BE /* UpcomingReleases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C371B02A1B6E310071B6BE /* UpcomingReleases.swift */; };
 		20C371B32A1B73560071B6BE /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C371B22A1B73560071B6BE /* MovieInfo.swift */; };
+		20C431572A24B79C00CAD26C /* HttpHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C431562A24B79C00CAD26C /* HttpHeaders.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		20C371AD2A1AB8080071B6BE /* MoviesSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesSDK.swift; sourceTree = "<group>"; };
 		20C371B02A1B6E310071B6BE /* UpcomingReleases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingReleases.swift; sourceTree = "<group>"; };
 		20C371B22A1B73560071B6BE /* MovieInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfo.swift; sourceTree = "<group>"; };
+		20C431562A24B79C00CAD26C /* HttpHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpHeaders.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		2016A6E92A1A5F9400547D20 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				20C431552A24B78600CAD26C /* HttpHeaders */,
 				20C3719B2A1A8B730071B6BE /* Extensions */,
 				2016A6EA2A1A5FA100547D20 /* Enums.swift */,
 				20C371A52A1AB3BD0071B6BE /* Constants.swift */,
@@ -189,6 +192,14 @@
 				20C371B22A1B73560071B6BE /* MovieInfo.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		20C431552A24B78600CAD26C /* HttpHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				20C431562A24B79C00CAD26C /* HttpHeaders.swift */,
+			);
+			path = HttpHeaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +319,7 @@
 				20C371AC2A1AB7530071B6BE /* MoviesSDKPresenter.swift in Sources */,
 				2016A6EB2A1A5FA100547D20 /* Enums.swift in Sources */,
 				20C371A22A1A9F050071B6BE /* UpcomingReleasesRQ.swift in Sources */,
+				20C431572A24B79C00CAD26C /* HttpHeaders.swift in Sources */,
 				20C371A62A1AB3BD0071B6BE /* Constants.swift in Sources */,
 				20C371B12A1B6E310071B6BE /* UpcomingReleases.swift in Sources */,
 				20C3719F2A1A8BA30071B6BE /* Codable.swift in Sources */,
